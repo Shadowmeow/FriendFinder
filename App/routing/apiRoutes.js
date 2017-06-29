@@ -23,7 +23,7 @@ module.exports = function (app) {
 
 			var possibleMatch = data[i];
 			var totalDifference = 0;
-			
+			//find the diferences
 			for(var i = 0; i < possibleMatch.scores.length; i++) {
 				var difference = Math.abs(possibleMatch.scores[i] - check.scores[i]);
 				totalDifference += difference;
@@ -34,7 +34,7 @@ module.exports = function (app) {
 
 		var bestFriendNum = differences[0];
 		var bestFriendIndex = 0;
-
+		//compare the results
 		for(var i = 1; i < differences.length; i++) {
 			if(differences[i] < bestFriendNum) {
 				bestFriendNum = differences[i];

@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
-//found this online
+//found this online to make it work
 app.use('/static', express.static("app"));
 
 require('/routing/api-routes.js')(app); 
