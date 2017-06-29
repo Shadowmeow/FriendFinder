@@ -11,8 +11,8 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 //found this online to make it work
 app.use('/static', express.static("app"));
 
-require('../App/routing/apiRoutes.js')(app); 
-require('../App/routing/htmlRoutes.js')(app);
+require('./routing/apiRoutes.js')(app); 
+require('./routing/htmlRoutes.js')(app);
 
 
 app.listen(PORT, function() {
