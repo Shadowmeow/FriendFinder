@@ -2,7 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
 var app = express();
-var port = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -11,8 +11,8 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 //found this online to make it work
 app.use('/static', express.static("app"));
 
-require('/routing/api-routes.js')(app); 
-require('/routing/html-routes.js')(app);
+require('../App/routing/apiRoutes.js')(app); 
+require('../App/routing/htmlRoutes.js')(app);
 
 
 app.listen(PORT, function() {
